@@ -1,4 +1,3 @@
-import { HOME } from '@angular/cdk/keycodes'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from '../components/header'
@@ -13,9 +12,11 @@ export default function publicrouter() {
     return (
         <div>
             <BrowserRouter>
+                <Header />
+
                 <Routes>
-                    <Route path='/' element={<Header />} />
-                    <Route path='header' element={<Header />} />
+
+
                     <Route path='promocard' element={<Promocard />} />
                     <Route path='card' element={<Card />} />
                     <Route path='mentors' element={<Mentors />} />
