@@ -8,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { CiLock } from "react-icons/ci";
 import Logoimg from "../../assets/image/LOGO.png";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -115,9 +116,13 @@ const LoginPage = () => {
 
             <p className="login-signup text-center">
               Don't have an Account?{" "}
-              <a href="/sign-up" className="login-signup-link">
+              <Link
+                to="/register"
+                href="/sign-up"
+                className="login-signup-link"
+              >
                 SIGN UP
-              </a>
+              </Link>
             </p>
           </Form>
         </Col>

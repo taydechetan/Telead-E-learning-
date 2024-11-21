@@ -35,7 +35,7 @@ p {
   cursor: pointer;
   font-size: 16px;
   margin: 0;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 

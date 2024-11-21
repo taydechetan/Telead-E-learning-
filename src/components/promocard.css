@@ -1,7 +1,7 @@
 .promo-container {
   /* background-color: #f0f4fc; */
   width: 100%;
-  height: 55vh;
+  /* height: 55vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 .promo-carousel {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -49,7 +49,6 @@
   max-width: 300px;
   border-radius: 15px;
 }
-
 
 .promo-dots {
   margin-top: 20px;

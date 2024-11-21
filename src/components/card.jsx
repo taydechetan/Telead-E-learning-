@@ -3,7 +3,6 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import "./card.css";
 import { IoIosArrowForward } from "react-icons/io";
 
-
 const CardComponent = () => {
   const cardData = [
     {
@@ -47,12 +46,12 @@ const CardComponent = () => {
   ];
 
   return (
-    <Container fluid className="card-containerrr px-0">
-      <Row className="card-header">
-        <Col xs="auto">
+    <Container className="card-containerrr rounded  mt-4  p-3">
+      <Row className="justify-content-around mb-2">
+        <Col lg={6} xs="auto">
           <h2 className="header-title">Popular Courses</h2>
         </Col>
-        <Col xs="auto">
+        <Col className="text-end" lg={5} xs="auto">
           <p className="header-see-all">
             SEE ALL{" "}
             <span className="header-arrow">
@@ -62,7 +61,7 @@ const CardComponent = () => {
         </Col>
       </Row>
 
-      <Col>
+      <Col className="mt-3 mb-3">
         <ul className="responsive-list">
           <li>All</li>
           <li>Web Development</li>
@@ -88,8 +87,10 @@ const CardComponent = () => {
                 <small className="text-orange">{card.category}</small>
                 <Card.Title className="card-title">{card.title}</Card.Title>
                 <div className="card-details">
-                  <span className="card-price">{card.price}</span>
-                  <span className="card-rating">⭐ {card.rating}</span>
+                  <span className="card-price">{card.price}</span>{" "}
+                  <span className="fw-bold">|</span>
+                  <span className="card-rating">⭐ {card.rating}</span>{" "}
+                  <span className="fw-bold">|</span>
                   <span className="card-students">{card.students}</span>
                 </div>
               </Card.Body>
