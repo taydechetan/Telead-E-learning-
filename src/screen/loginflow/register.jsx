@@ -7,21 +7,22 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa6";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
+import { FaRegUser } from "react-icons/fa";
+import Image from "../../assets/image/LOGO.png";
 
-const SignUpForm = () => {
+const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-
   return (
     <Container className="signup-container">
       <div className="signup-header">
-        {/* <img src={img} alt="App Logo" className="signup-logo" /> */}
-        <h1>Shmangus</h1>
-        <p className="signup-tagline">LEARN APP</p>
+        <img src={Image} alt="App Logo" className="signup-logoo" />
+        {/* <h1>Shmangus</h1>
+        <p className="signup-tagline">LEARN APP</p> */}
       </div>
 
       <h2 className="signup-title">Getting Started.!</h2>
@@ -30,7 +31,8 @@ const SignUpForm = () => {
         <Form.Group className="mb-3" controlId="formFullName">
           <div className="signup-input-group">
             <span className="signup-icon">
-              <MdOutlineMailOutline />
+              {/* <MdOutlineMailOutline /> */}
+              <FaRegUser />
             </span>
             <Form.Control
               type="text"
@@ -67,7 +69,7 @@ const SignUpForm = () => {
               className="signup-password-toggle"
               onClick={togglePasswordVisibility}
             >
-              {showPassword ? <BsEyeSlash /> : <BsEye />}
+              {showPassword ? <BsEye /> : <BsEyeSlash />}
             </span>
           </div>
         </Form.Group>
@@ -90,19 +92,48 @@ const SignUpForm = () => {
 
       <div className="signup-alternatives">
         <p>Or Continue With</p>
-        <Row>
-          <Col className="text-center">
-            <Button className="signup-alt-btn google rounded-circle">
-              {/* <FaGoogle /> Google */}
+        {/* <Row className="g-5 justify-content-center align-items-center">
+          <Col xs="auto" className="text-center">
+            <p
+              className="rounded-circle mb-0 p-2"
+              style={{
+                border: "1px solid #ddd",
+                width: "40px",
+                height: "40px",
+              }}
+            >
               <FcGoogle />
-            </Button>
+            </p>
           </Col>
-          <Col className="text-center">
-            <Button className="signup-alt-btn apple rounded-circle">
+
+          <Col xs="auto" className="text-center">
+            <p
+              className="rounded-circle mb-0 p-2"
+              style={{
+                border: "1px solid #ddd",
+                width: "40px",
+                height: "40px",
+              }}
+            >
               <FaApple />
-            </Button>
+            </p>
           </Col>
-        </Row>
+        </Row> */}
+
+        <div className="register-social-buttons d-flex justify-content-center gap-3 mb-3">
+          <Button
+            variant="light"
+            className="register-social-button rounded-circle"
+          >
+            <FcGoogle />
+          </Button>
+          <Button
+            variant="light"
+            className="register-social-button rounded-circle"
+          >
+            <FaApple />
+          </Button>
+        </div>
       </div>
 
       <p className="signup-footer">
@@ -112,4 +143,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default Register;

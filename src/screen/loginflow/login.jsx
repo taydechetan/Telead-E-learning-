@@ -7,6 +7,7 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { CiLock } from "react-icons/ci";
+import Logoimg from "../../assets/image/LOGO.png";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,16 +28,7 @@ const LoginPage = () => {
               justifyContent: "center",
             }}
           >
-            <img
-              src="https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454"
-              alt="App Logo"
-              className="login-logo"
-            />
-
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h4 className="login-title mt-3">Shmangus</h4>
-              <p className="login-subtitle text-muted">Learning web </p>
-            </div>
+            <img src={Logoimg} alt="imgage" />
           </div>
 
           <h5 className="login-signin-title  mb-3" style={{ color: "#202244" }}>
@@ -52,12 +44,12 @@ const LoginPage = () => {
                 <AiOutlineMail className="login-input-icon" />
                 <Form.Control
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email Address "
                   className="login-input rounded-end"
                 />
               </div>
             </Form.Group>
-
+            {/* {console.log} */}
             <Form.Group
               className="login-form-group mb-3"
               controlId="formPassword"
