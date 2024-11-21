@@ -44,12 +44,12 @@ const LoginPage = () => {
                 <AiOutlineMail className="login-input-icon" />
                 <Form.Control
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email "
                   className="login-input rounded-end"
                 />
               </div>
             </Form.Group>
-
+            {/* {console.log} */}
             <Form.Group
               className="login-form-group mb-3"
               controlId="formPassword"
