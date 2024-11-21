@@ -1,0 +1,173 @@
+.login-wrapper {
+  background-color: #f7faff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-row {
+  min-height: 100vh;
+}
+
+.login-col {
+  max-width: 100%;
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-logo {
+  width: 80px;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.login-form-group {
+  margin-bottom: 1rem;
+}
+
+.login-input-group {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.login-input-icon {
+  background-color: #f1f1f1;
+}
+
+.login-input {
+  border: none;
+  padding: 12px;
+}
+
+.login-options {
+  font-size: 0.9rem;
+}
+
+.login-remember-me {
+  font-size: 0.9rem;
+}
+
+.login-forgot-password {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: black;
+}
+
+.login-button {
+  background-color: #0961f5;
+  border-color: #0961f5;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.login-button:hover {
+  background-color: #004ccc;
+}
+
+.login-or {
+  font-size: 14px;
+  color: #666;
+  font-weight: 800;
+}
+
+.login-social-buttons .login-social-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.login-social-button:hover {
+  border-color: #bbb;
+}
+
+.login-signup {
+  font-size: 0.9rem;
+}
+
+.login-signup-link {
+  color: #0961f5;
+}
+
+.login-signup-link:hover {
+  text-decoration: underline;
+}
+
+.login-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.login-eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.login-input-wrapper {
+  position: relative;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+}
+
+.login-input {
+  padding-left: 36px;
+}
+
+.login-button {
+  position: relative;
+  padding-right: 50px;
+  width: 350px;
+  height: 50px;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #0066ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-signin-title {
+  font-family: Jost;
+}
