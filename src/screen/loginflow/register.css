@@ -5,6 +5,7 @@
   margin: 30px auto;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Mulish;
 }
 
 .signup-header {
@@ -25,14 +26,15 @@
 .signup-title {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   margin: 20px 0;
+  font-family: Jost;
+  color: #202244;
 }
 
 .signup-form {
   margin-top: 20px;
 }
-
 
 .signup-input-group {
   display: flex;
@@ -51,10 +53,15 @@
 
 .signup-input {
   flex: 1;
-  border: none;
+  border: 0px;
   outline: none;
   font-size: 14px;
   background: transparent;
+}
+
+.signup-input:focus {
+  border: none;
+  box-shadow: none;
 }
 
 .signup-password-toggle {
@@ -116,11 +123,34 @@
 }
 
 .signup-footer a {
-  color: #007bff;
+  color: #0961f5;
   font-weight: bold;
   text-decoration: none;
 }
 
 .signup-footer a:hover {
   text-decoration: underline;
+}
+
+.signup-alt-btn.google:hover {
+  background-color: white;
+  color: white;
+}
+
+.signup-alt-btn.apple:hover {
+  background-color: white;
+  color: black;
+}
+
+.register-social-buttons .register-social-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.register-social-button:hover {
+  border-color: #bbb;
 }

@@ -20,15 +20,6 @@
   width: 80px;
 }
 
-.login-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.login-subtitle {
-  font-size: 0.9rem;
-}
-
 .login-form {
   margin-top: 20px;
 }
@@ -156,8 +147,8 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   color: #0066ff;
   border-radius: 50%;
