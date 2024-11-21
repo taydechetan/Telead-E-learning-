@@ -26,15 +26,14 @@ const mentors = [
   },
 ];
 
-
 const TopMentor = () => {
   return (
-    <Container className="top-mentor-container">
-      <Row className="top-mentor-header">
-        <Col xs="auto" className="mentor-title">
+    <Container className="top-mentor-container p-3 rounded bg-light">
+      <Row className="top-mentor-header justify-content-around">
+        <Col lg={6} xs="auto" className="mentor-title">
           <h2>Top Mentor</h2>
         </Col>
-        <Col xs="auto" className="mentor-see-all">
+        <Col lg={5} xs="auto" className="mentor-see-all text-end">
           <p>
             SEE ALL{" "}
             <span role="img" aria-label="arrow">

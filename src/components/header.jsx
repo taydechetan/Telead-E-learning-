@@ -7,6 +7,8 @@ import PromoCard from "./promocard";
 import Card from "./card";
 import Mentors from "./mentors";
 import Categorysection from "./categorysection";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -17,7 +19,10 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        style={{ zIndex: 1030 }}
+        className="navbar navbar-expand-lg position-fixed w-100 top-0  navbar-light bg-light"
+      >
         <div className="container">
           <FaSearch className="search-icon" onClick={toggleSearchBar} />
           {isSearchOpen && (
@@ -33,7 +38,8 @@ const Header = () => {
           )}
 
           {!isSearchOpen && (
-            <a
+            <Link
+              to="/"
               className="navbar-brand d-flex align-items-center"
               href="#"
               style={{ fontWeight: "bold" }}
@@ -44,7 +50,7 @@ const Header = () => {
                 style={{ height: "30px", marginRight: "10px" }}
               />
               Telead E-learning
-            </a>
+            </Link>
           )}
           {/* <input type="text" placeholder="Search" /> */}
           <button
@@ -61,9 +67,9 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#categories">
+                <Link to="/" className="nav-link" href="#categories">
                   Home & categories
-                </a>
+                </Link>
               </li>
 
               {/* <input
@@ -79,37 +85,27 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#about">
-                  About us
+                  About Us
                 </a>
               </li>
-              <div style={{ display: "flex" }} className="button-container">
-                <li className="nav-item">
-                  <a
-                    className="btn btn-primary"
-                    style={{ borderRadius: "18px" }}
-                    href="#signin"
-                  >
-                    Sign in
-                  </a>
-                </li>
-                <li className="nav-item ms-3">
-                  <button
-                    className="btn btn-outline-primary"
-                    style={{ borderRadius: "18px" }}
-                  >
-                    login
-                  </button>
-                </li>
-              </div>
+              <li className="nav-item">
+                <a className="nav-link" href="#about">
+                  Contact Us
+                </a>
+              </li>
+              {/* <div style={{ display: "flex" }} className="button-container"> */}
+              <li className="nav-item">
+                {" "}
+                <Link to="/login" className="nav-link" href="#about">
+                  <Button className="rounded-pill">Login</Button>
+                </Link>
+              </li>
+
+              {/* </div> */}
             </ul>
           </div>
         </div>
       </nav>
-
-      <PromoCard />
-      <Categorysection />
-      <Card />
-      <Mentors />
     </>
   );
 };
