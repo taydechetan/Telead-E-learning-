@@ -44,7 +44,7 @@ const LoginPage = () => {
                 <AiOutlineMail className="login-input-icon" />
                 <Form.Control
                   type="email"
-                  placeholder="Email "
+                  placeholder="Email Address "
                   className="login-input rounded-end"
                 />
               </div>
