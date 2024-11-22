@@ -10,6 +10,10 @@ import Register from "../screen/loginflow/register";
 import Home from "../screen/Home/Home";
 import Footer from "../screen/Footer/Footer";
 import ForgotPassword from "../screen/loginflow/forgotpassword/forgotpassword";
+import Confrompassword from "../screen/loginflow/confrompassword/confrompassword";
+import VerifyCode from "../screen/loginflow/verifyotp/verifycode";
+import Contactus from "../screen/contactuspage/contactus";
+
 
 export default function publicrouter() {
   return (
@@ -23,8 +27,11 @@ export default function publicrouter() {
           <Route path="mentors" element={<Mentors />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="verifyCode" element={<VerifyCode />} />
+          <Route path="Contactus" element={<Contactus />} />
           <Route path="categorysection" element={<Categorysection />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="confrompassword" element={<Confrompassword />} />
         </Routes>
         <Footer />
       </BrowserRouter>

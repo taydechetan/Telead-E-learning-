@@ -89,9 +89,9 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">
+                <Link className="nav-link" to="/Contactus">
                   Contact Us
-                </a>
+                </Link>
               </li>
               {/* <div style={{ display: "flex" }} className="button-container"> */}
               <li className="nav-item">

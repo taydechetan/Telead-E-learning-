@@ -9,6 +9,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import Image from "../../assets/image/LOGO.png";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +19,7 @@ const Register = () => {
   };
 
   return (
-    <Container className="signup-container">
+    <Container className="signup-container mt-5">
       <div className="signup-header">
         <img src={Image} alt="App Logo" className="signup-logoo" />
         {/* <h1>Shmangus</h1>
@@ -83,7 +84,7 @@ const Register = () => {
         </Form.Group>
 
         <Button className="login-button w-100 mb-3" type="submit">
-          Sign In
+          Sign Up
           <span className="icon-wrapper">
             <FaArrowRight />
           </span>
@@ -137,7 +138,12 @@ const Register = () => {
       </div>
 
       <p className="signup-footer">
-        Already have an Account? <a href="/signin">SIGN IN</a>
+        Already have an Account?{" "}
+        <Link
+         to="/login" href="/sign-up">
+          {" "}
+          <a href="/signin">SIGN IN</a>{" "}
+        </Link>
       </p>
     </Container>
   );
