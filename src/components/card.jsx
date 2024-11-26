@@ -2,8 +2,11 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./card.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const CardComponent = () => {
+  const navigate = useNavigate();
+
   const cardData = [
     {
       id: 1,
@@ -45,6 +48,10 @@ const CardComponent = () => {
     },
   ];
 
+  const handleCardClick = (card) => {
+    navigate("/CourseCard", { state: card });
+  };
+
   return (
     <Container className="card-containerrr rounded  mt-4  p-3">
       <Row className="justify-content-around mb-2">
@@ -81,7 +88,7 @@ const CardComponent = () => {
             lg={3}
             className="d-flex justify-content-center mb-4"
           >
-            <Card className="custom-card">
+            <Card className="custom-card" onClick={() => handleCardClick(card)}>
               <Card.Img variant="top" src={card.image} className="card-image" />
               <Card.Body>
                 <small className="text-orange">{card.category}</small>
