@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./card.css";
 import { IoIosArrowForward } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CardComponent = () => {
   const navigate = useNavigate();
@@ -59,12 +59,15 @@ const CardComponent = () => {
           <h2 className="header-title">Popular Courses</h2>
         </Col>
         <Col className="text-end" lg={5} xs="auto">
-          <p className="header-see-all">
-            SEE ALL{" "}
-            <span className="header-arrow">
-              <IoIosArrowForward />
-            </span>
-          </p>
+          <Link to="/courses">
+            {" "}
+            <p className="header-see-all">
+              SEE ALL{" "}
+              <span className="header-arrow">
+                <IoIosArrowForward />
+              </span>
+            </p>
+          </Link>
         </Col>
       </Row>
 

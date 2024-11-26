@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Mulish:wght@400;500;700&display=swap");
+
+/* Apply Mulish font globally as the default font */
 * {
-  font-family: "Jost";
+  font-family: "Mulish", sans-serif;
 }
-body,
+
+/* Specifically apply Jost font to headings */
 h1,
 h2,
-p {
-  font-family: "Jost";
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
 }
