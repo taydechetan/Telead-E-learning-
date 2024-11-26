@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "./mentor.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const mentors = [
   {
@@ -35,7 +36,7 @@ const TopMentor = () => {
         </Col>
         <Col lg={5} xs="auto" className="mentor-see-all text-end">
           <p>
-            SEE ALL{" "}
+            <Link to="/mentor"> SEE ALL</Link>{" "}
             <span role="img" aria-label="arrow">
               <IoIosArrowForward />
             </span>

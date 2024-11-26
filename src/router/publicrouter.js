@@ -15,7 +15,8 @@ import VerifyCode from "../screen/loginflow/verifyotp/verifycode";
 import Contactus from "../screen/contactuspage/contactus";
 import Congrats from "../screen/loginflow/congratsscreen/congrats";
 import CourseCard from "../screen/courseCard/coursecard";
-
+import Courses from "../screen/Courses/Courses";
+import MentorScreen from "../screen/Mentors/MentorScreen";
 
 export default function publicrouter() {
   return (
@@ -36,6 +37,8 @@ export default function publicrouter() {
           <Route path="congrats" element={<Congrats />} />
           <Route path="confrompassword" element={<Confrompassword />} />
           <Route path="CourseCard" element={<CourseCard />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="mentor" element={<MentorScreen />} />
         </Routes>
         <Footer />
       </BrowserRouter>
