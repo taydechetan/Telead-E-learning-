@@ -30,10 +30,7 @@ const ForgotPassword = () => {
   };
 
   return (
-    <Container
-      className="d-flex flex-column align-items-center justify-content-center"
-      style={{ height: "75vh" }}
-    >
+    <Container className="d-flex flex-column align-items-center justify-content-center forgetpasswordcont">
       <div className="forgot-password-container">
         <div
           className="text-center"
@@ -45,7 +42,7 @@ const ForgotPassword = () => {
         >
           <img src={Logo} alt="App Logo" className="img-logoo" />
         </div>
-        {/* <img src="/images/LOGO.png" alt="App Logo" className="login-logo" /> */}
+
         <h2 className="mb-4">Forget Password?</h2>
         <Form
           onSubmit={handleSubmit}

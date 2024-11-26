@@ -13,6 +13,8 @@ import ForgotPassword from "../screen/loginflow/forgotpassword/forgotpassword";
 import Confrompassword from "../screen/loginflow/confrompassword/confrompassword";
 import VerifyCode from "../screen/loginflow/verifyotp/verifycode";
 import Contactus from "../screen/contactuspage/contactus";
+import Congrats from "../screen/loginflow/congratsscreen/congrats";
+import CourseCard from "../screen/courseCard/coursecard";
 
 
 export default function publicrouter() {
@@ -31,7 +33,9 @@ export default function publicrouter() {
           <Route path="Contactus" element={<Contactus />} />
           <Route path="categorysection" element={<Categorysection />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="congrats" element={<Congrats />} />
           <Route path="confrompassword" element={<Confrompassword />} />
+          <Route path="CourseCard" element={<CourseCard />} />
         </Routes>
         <Footer />
       </BrowserRouter>

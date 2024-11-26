@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Form, Button, Row, Col, InputGroup } from "react-bootstrap";
 import { FaLock, FaEye, FaEyeSlash, FaArrowRight } from "react-icons/fa";
 import "./confrompassword.css";
+import Logoimage from "../../../assets/image/LOGO.png";
+import { Link } from "react-router-dom";
 
 const Confrompassword = () => {
   const [password, setPassword] = useState("");
@@ -21,15 +23,15 @@ const Confrompassword = () => {
     <Container
       fluid
       className="cp-container d-flex align-items-center justify-content-center"
-      style={{ height: "100vh" }}
+      style={{ minHeight: "80vh" }}
     >
-      <Row
-        className="shadow-lg rounded cp-box  p-4"
-        style={{ backgroundColor: "#F5F9FF", height: "70vh" }}
-      >
+      <Row className="pillarrr  shadow-lg rounded cp-box text-center  p-4 mt-5 px-3 px-md-0">
         <Col className="confrompasscol">
-          <h4 className="cp-title mb-4">Create Your New Password</h4>
-          <Form>
+          <img src={Logoimage} alt="imgage" className="confromighhttrtg" />
+          <Form className="px-lg-5 px-md-4">
+            <h4 className="cp-title mb-4 text-start mt-4">
+              Create Your New Password
+            </h4>
             <InputGroup className="cp-input-group mb-3">
               <InputGroup.Text className="cp-icon-left">
                 <FaLock />
@@ -74,15 +76,17 @@ const Confrompassword = () => {
               </InputGroup.Text>
             </InputGroup>
 
-            <Button
-              className="cp-button w-100 mb-3 d-flex align-items-center justify-content-arround mt-5"
-              type="submit"
-            >
-              <span className="text-center">Continue</span>
-              <span className="cp-icon-wrapper">
-                <FaArrowRight />
-              </span>
-            </Button>
+            <Link to="/Congrats">
+              <Button
+                className="cp-button w-100 mb-3 d-flex align-items-center  mt-5"
+                type="submit"
+              >
+                <span className="mx-auto">Continue</span>
+                <span className="cp-icon-wrapper">
+                  <FaArrowRight />
+                </span>
+              </Button>
+            </Link>
           </Form>
         </Col>
       </Row>

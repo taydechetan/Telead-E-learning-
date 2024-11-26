@@ -10,6 +10,7 @@ import { CiLock } from "react-icons/ci";
 import Logoimg from "../../assets/image/LOGO.png";
 import { Link } from "react-router-dom";
 
+
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -20,7 +21,7 @@ const LoginPage = () => {
   return (
     <Container fluid className="login-wrapper">
       <Row className="login-row justify-content-center align-items-center">
-        <Col xs={10} sm={8} md={6} lg={4} className="login-col">
+        <Col xs={10} sm={8} md={6} lg={4} className="login-col mt-5">
           <div
             className="login-header text-center mb-4 d-flex"
             style={{

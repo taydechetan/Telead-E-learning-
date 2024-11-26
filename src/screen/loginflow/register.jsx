@@ -139,8 +139,7 @@ const Register = () => {
 
       <p className="signup-footer">
         Already have an Account?{" "}
-        <Link
-         to="/login" href="/sign-up">
+        <Link to="/login" href="/sign-up">
           {" "}
           <a href="/signin">SIGN IN</a>{" "}
         </Link>
