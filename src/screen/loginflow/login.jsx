@@ -95,6 +95,7 @@ const LoginPage = () => {
         setToken(data?.result.api_token);
         setUserData(data?.result);
         navigate("/");
+        window.location.reload();
         setLoad(false);
       } else {
         setLoad(false);

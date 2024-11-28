@@ -2,6 +2,10 @@
   margin-right: 20px;
 }
 
+.navbar {
+  background-color: #f5f4f1;
+}
+
 .nav-item:last-child {
   margin-right: 0;
 }
@@ -98,14 +102,14 @@
   cursor: pointer;
 }
 
-.cart-modal-checkout-btn{
+.cart-modal-checkout-btn {
   background-color: rgb(26, 197, 140);
   color: white;
   border: none;
   padding: 10px 20px;
 }
 
-.cart-modal-checkout-btn:hover{
+.cart-modal-checkout-btn:hover {
   background-color: #1f89e0;
   color: white;
   border: none;

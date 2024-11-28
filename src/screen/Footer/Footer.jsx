@@ -14,6 +14,11 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
+ 
+  const scrollbytt = () => {
+    window.scrollTo({top: 0, behavior: "smooth" })
+  }
+
   return (
     <footer className="footer mt-auto py-4 bg-dark text-white">
       <Container>
@@ -31,7 +36,7 @@ function Footer() {
             <h6 className="font-weight-bold text-white">Company</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to="/">
+                <Link to="/" onClick={scrollbytt}>
                   {" "}
                   <a href="#">Home</a>
                 </Link>
@@ -40,12 +45,12 @@ function Footer() {
                 <a href="#">About us</a>
               </li>
               <li>
-                <Link to="/term-and-condition">
+                <Link to="/termcondition">
                   <a href="#">Terms & conditions</a>
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy">
+                <Link to="/Privacypolicy">
                   <a href="#">Privacy policy</a>
                 </Link>
               </li>

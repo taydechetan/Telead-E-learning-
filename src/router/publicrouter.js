@@ -19,6 +19,8 @@ import Courses from "../screen/Courses/Courses";
 import MentorScreen from "../screen/Mentors/MentorScreen";
 import Profilepage from "../screen/loginflow/profile/profilepage";
 import Cart from "../screen/addTocard/cart";
+import Termcondition from "../screen/Footer/termcondition";
+import Privacypolicy from "../screen/Footer/privacypolicy/privacypolicy";
 
 export default function publicrouter() {
   return (
@@ -43,6 +45,8 @@ export default function publicrouter() {
           <Route path="mentor" element={<MentorScreen />} />
           <Route path="profilepage" element={<Profilepage />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="termcondition" element={<Termcondition />} />
+          <Route path="privacypolicy" element={<Privacypolicy/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

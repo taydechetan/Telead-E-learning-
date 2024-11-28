@@ -1,3 +1,4 @@
+import Contactus from "../screen/contactuspage/contactus";
 import ForgotPassword from "../screen/loginflow/forgotpassword/forgotpassword";
 
 const APPConfig = {
@@ -9,6 +10,9 @@ const ApiEndPoints = {
   StdRegister: `${APPConfig.API_URL}/student-register`,
   Login: `${APPConfig.API_URL}/login`,
   ForgotPassword: `${APPConfig.API_URL}/forgot-password`,
+  Contactus: `${APPConfig.API_URL}/contactus`,
+  Termconditon: `${APPConfig.API_URL}/page/terms_condition`,
+  Privacypolicy: `${APPConfig.API_URL}/page/privacy_policy`,
 };
 
 export default ApiEndPoints;
