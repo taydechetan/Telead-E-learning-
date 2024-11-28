@@ -9,6 +9,11 @@ import { FaGoogle, FaArrowRight } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import Logo from "../../../assets/image/LOGO.png";
 import { AiOutlineMail } from "react-icons/ai";
+import toast from "react-hot-toast";
+import ClipLoader from "react-spinners/ClipLoader";
+
+import * as Yup from "yup";
+import ApiEndPoints from "../../../networkcall/apiendpoint";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
@@ -17,20 +22,88 @@ const ForgotPassword = () => {
   const [error, setError] = useState("");
   const [otp, setOtp] = useState("");
 
+  const [formdata, setFormdata] = useState({
+    email: "",
+  });
+  const [errors, setErrors] = useState({}); // To store validation errors
+  console.log("ERRROR>>>>", errors);
+  const [load, setLoad] = useState(false);
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Enter a valid email address")
+      .required("Email is required"),
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setFormdata({
+      ...formdata,
+      [name]: value,
+    });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setEmailError("");
-    setError("");
+    try {
+      // Validate the form data
 
-    if (email.trim() === "") {
-      setEmailError("Please enter your email");
-      return;
+      await validationSchema.validate(formdata, { abortEarly: false });
+      setErrors({}); // Clear errors if validation passes
+      setLoad(true);
+
+      // Create FormData object and append fields
+      const formDataObj = new FormData();
+
+      formDataObj.append("email", formdata.email);
+
+      // API call
+      const response = await fetch(ApiEndPoints.ForgotPassword, {
+        method: "POST",
+        body: formDataObj,
+      });
+
+      if (!response.ok) {
+        throw new Error("Registration failed");
+      }
+
+      const data = await response.json();
+      if (data.success) {
+        toast.success(data?.msg);
+        // navigate("/login");
+        setLoad(false);
+      } else {
+        setLoad(false);
+        toast.error(data?.msg);
+      }
+
+      // Handle successful registration logic
+    } catch (error) {
+      if (error.inner) {
+        // Handle validation errors
+        const formattedErrors = {};
+        error.inner.forEach((err) => {
+          formattedErrors[err.path] = err.message;
+        });
+        setErrors(formattedErrors);
+      } else {
+        // Handle API or other errors
+        console.error("Error during registration:", error.message);
+        alert("Registration failed. Please try again.");
+      }
     }
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center forgetpasswordcont">
+    <Container
+      style={{ marginTop: "40px" }}
+      className="d-flex flex-column align-items-center justify-content-center forgetpasswordcont"
+    >
+      {load && (
+        <div style={loaderStyle}>
+          <ClipLoader color={"#155239"} loading={load} size={50} />
+        </div>
+      )}
       <div className="forgot-password-container">
         <div
           className="text-center"
@@ -68,24 +141,38 @@ const ForgotPassword = () => {
                 type="email"
                 placeholder="Email Address "
                 className="login-input rounded-end"
+                name="email"
+                value={formdata.email}
+                onChange={handleChange}
               />
             </div>
+            {errors.email && <p className="text-danger">{errors.email}</p>}
           </Form.Group>
 
-          <Link to="/VerifyCode">
-            <Button className="login-button w-100 mb-3 mt-5" type="submit">
-              Continue
-              <span className="icon-wrapper">
-                <FaArrowRight />
-              </span>
-            </Button>
-          </Link>
+          <Button className="login-button w-100 mb-3 mt-3" type="submit">
+            Continue
+            <span className="icon-wrapper">
+              <FaArrowRight />
+            </span>
+          </Button>
         </Form>
         {error && <p className="text-danger mt-3">{error}</p>}
       </div>
       {/* <ToastContainer /> */}
     </Container>
   );
+};
+const loaderStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100vh",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  background: "rgba(255, 255, 255, 0.8)", // Optional overlay
+  zIndex: 9999,
 };
 
 export default ForgotPassword;
