@@ -17,6 +17,8 @@ import Congrats from "../screen/loginflow/congratsscreen/congrats";
 import CourseCard from "../screen/courseCard/coursecard";
 import Courses from "../screen/Courses/Courses";
 import MentorScreen from "../screen/Mentors/MentorScreen";
+import Profilepage from "../screen/loginflow/profile/profilepage";
+import Cart from "../screen/addTocard/cart";
 
 export default function publicrouter() {
   return (
@@ -36,9 +38,11 @@ export default function publicrouter() {
           <Route path="forgot-password" element={<ForgotPassword />} />
           <Route path="congrats" element={<Congrats />} />
           <Route path="confrompassword" element={<Confrompassword />} />
-          <Route path="CourseCard" element={<CourseCard />} />
+          <Route path="courseCard" element={<CourseCard />} />
           <Route path="courses" element={<Courses />} />
           <Route path="mentor" element={<MentorScreen />} />
+          <Route path="profilepage" element={<Profilepage />} />
+          <Route path="cart" element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>

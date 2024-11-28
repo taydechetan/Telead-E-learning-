@@ -73,3 +73,41 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+.cartshoppingicon {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: rounded-full;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navitemscar {
+  position: relative;
+}
+
+.modal-content {
+  width: 50%;
+  float: right;
+}
+
+.cart-modal-remove-btn {
+  cursor: pointer;
+}
+
+.cart-modal-checkout-btn{
+  background-color: rgb(26, 197, 140);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.cart-modal-checkout-btn:hover{
+  background-color: #1f89e0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}

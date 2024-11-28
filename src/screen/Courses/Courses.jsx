@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, Row, Col, Badge, Container } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import Images from "../../helper/Images";
 import "./Courses.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useCart } from "../../components/cartcontext";
 const Courses = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const { cart, addToCart } = useCart();
+  const selectedCourse = location.state?.selectedCourse;
+
+  useEffect(() => {
+    if (selectedCourse && !cart.some(item => item.id === selectedCourse.id)) {
+      addToCart(selectedCourse);  // Add the course to the cart
+    }
+  }, [selectedCourse, cart, addToCart]);
+  
   const cardData = [
     {
       image:
@@ -29,7 +41,7 @@ const Courses = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1717278919990-0a9c81d27e51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",
+        "https://img.freepik.com/free-photo/ideas-design-draft-creative-sketch-objective-concept_53876-121105.jpg",
       title: "Graphic Design",
       rating: 4.5,
       description: "Graphic Design Advanced",
@@ -98,10 +110,15 @@ const Courses = () => {
       students: "7830 ",
     },
   ];
+
+  const handleCardClick = (course) => {
+    navigate("/cart", { state: { selectedCourse: course } });
+  };
+
+
   return (
     <Container className=" shadow mb-3 p-3" style={{ marginTop: "80px" }}>
       <Row className="align-items-center mb-3">
-        {/* Back Arrow Section */}
         <Col
           lg={"auto"}
           className="d-flex justify-content-center align-items-center"
@@ -111,12 +128,11 @@ const Courses = () => {
             src={Images.BackArrow}
             alt="Back"
             style={{
-              cursor: "pointer", // Indicates clickable action
+              cursor: "pointer", 
             }}
           />
         </Col>
 
-        {/* Heading Section */}
         <Col lg={11} className="d-flex align-items-center">
           <h3 className="text-start fw-bold" style={{ margin: "0 0 0 10px" }}>
             Top Courses
@@ -133,6 +149,7 @@ const Courses = () => {
                 overflow: "hidden",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
               }}
+              onClick={() => handleCardClick(card)}
             >
               <Row>
                 {/* Left Image Section */}
@@ -140,7 +157,6 @@ const Courses = () => {
                   <img src={card.image} alt="" className="image-hover" />
                 </Col>
 
-                {/* Right Content Section */}
                 <Col xs={8} lg={8}>
                   <Card.Body>
                     <div className="d-flex justify-content-between">
