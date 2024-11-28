@@ -16,7 +16,7 @@
 
 .course-details-section {
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 8px;
 }
 
@@ -127,4 +127,46 @@
 .custom-tabs .nav-link:hover {
   background-color: #e9ecef;
   color: #007bff;
+}
+
+.coursec-titlee {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.coursec-subtitlee {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .coursec-titlee {
+    font-size: 1.5rem;
+  }
+
+  .coursec-subtitlee {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .coursec-subtitlee {
+    font-size: 0.9rem;
+  }
+
+  .course-purchase-section {
+    width: 90%;
+  }
+}
+
+.row .headingg-section {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

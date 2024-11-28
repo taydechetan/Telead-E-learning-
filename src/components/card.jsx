@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./card.css";
 import { IoIosArrowForward } from "react-icons/io";
@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const CardComponent = () => {
   const navigate = useNavigate();
+  const [card, setcard] = useState([]);
 
   const cardData = [
     {
