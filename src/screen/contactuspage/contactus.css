@@ -36,3 +36,10 @@
   font-size: 16px;
   font-weight: bold;
 }
+
+@media (max-width: 512px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+}
+

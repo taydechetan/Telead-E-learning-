@@ -166,6 +166,8 @@
 // };
 
 // export default Register;
+
+
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { FaArrowRight, FaRegUser } from "react-icons/fa";
