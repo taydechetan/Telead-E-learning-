@@ -6,6 +6,8 @@ import { FaCheck } from "react-icons/fa";
 // import { useCart } from "./CartContext";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../components/cartcontext";
+import toast from "react-hot-toast";
+
 
 const Coursecard = () => {
   const location = useLocation();
@@ -20,11 +22,11 @@ const Coursecard = () => {
     const courseExists = cart.some((item) => item.id === courseData.id);
 
     if (courseExists) {
-      alert("Course already added to cart");
+      toast.error("Course already added to cart");
     } else {
       addToCart(courseData);
-      alert("Course added to cart");
-      navigate("/cart");
+      toast.success("Course added to cart");
+      // navigate("/cart");
     }
   };
 
@@ -427,7 +429,7 @@ const Coursecard = () => {
           <Button className="add-to-cart-btn" onClick={handleAddToCart}>
             Add to Cart
           </Button>
-          <Button className="buy-now-btn">Buy Now</Button>
+          <Button className="buy-now-btn" onClick={handleAddToCart}>Buy Now</Button>
           <ul className="course-highlights">
             <li>42.5 hours on-demand video</li>
             <li>5 coding exercises</li>

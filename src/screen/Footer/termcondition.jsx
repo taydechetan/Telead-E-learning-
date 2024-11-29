@@ -27,10 +27,7 @@ function Termscondition() {
         setLoading(false);
       }
     };
-// Today implement Contact-us Api
-// Then Implement Privacy-policy Api
-// Then Implement Terms-condition Api
-// working on  Privacy-Policy and Term-Condition Page Risponsive  design screen 
+
     fetchData();
   }, []);
 

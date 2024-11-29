@@ -15,7 +15,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import toast from "react-hot-toast";
 import { setToken, setUserData } from "../../helper/storage";
 
-const LoginPage = () => {
+const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [formdata, setFormdata] = useState({
@@ -258,8 +258,8 @@ const loaderStyle = {
   top: 0,
   left: 0,
   width: "100%",
-  background: "rgba(255, 255, 255, 0.8)", // Optional overlay
+  background: "rgba(255, 255, 255, 0.8)", 
   zIndex: 9999,
 };
 
-export default LoginPage;
+export default Login;

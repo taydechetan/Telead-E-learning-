@@ -100,6 +100,8 @@
 
 .cart-modal-remove-btn {
   cursor: pointer;
+  text-decoration: none;
+  color: red;
 }
 
 .cart-modal-checkout-btn {
@@ -114,4 +116,20 @@
   color: white;
   border: none;
   padding: 10px 20px;
+}
+
+
+@media (max-width: 820px) {
+  .modal-content {
+    width: 65%;
+    float: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    width: 70%;
+    float: right;
+    margin: 0 auto;
+  }
 }
