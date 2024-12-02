@@ -13,7 +13,8 @@ const ApiEndPoints = {
   Contactus: `${APPConfig.API_URL}/contactus`,
   Termconditon: `${APPConfig.API_URL}/page/terms_condition`,
   Privacypolicy: `${APPConfig.API_URL}/page/privacy_policy`,
-  Sendotpemail: `${APPConfig.API_URL}/send-otp-email`,
+  Sendotpemail: `${APPConfig.API_URL}/forgot-verify-email-otp`,
 };
 
 export default ApiEndPoints;
+

@@ -2,6 +2,11 @@
   width: 200px;
 }
 
+.checkouttbn {
+  height: 43px;
+  font-size: 17px;
+}
+
 .empty-carttr {
   text-align: center;
   margin: 90px auto;

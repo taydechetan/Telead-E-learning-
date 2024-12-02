@@ -33,7 +33,7 @@ const PromoCarousel = () => {
   ];
 
   return (
-    <Container className="promo-container  ">
+    <Container className="promo-container">
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
