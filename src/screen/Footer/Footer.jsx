@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 // import "./App.css";
 import "./Footer.css";
+
 // import Images from "./Helper/Images";
 import {
   FaApple,
@@ -14,10 +15,9 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
- 
   const scrollbytt = () => {
-    window.scrollTo({top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="footer mt-auto py-4 bg-dark text-white">
@@ -99,16 +99,19 @@ function Footer() {
           <Col md={3} xs={6} className=" text-md-left mb-3">
             <h6 className="font-weight-bold text-white">Social links</h6>
             <div className="d-flex justify-content-start justify-content-md-start mb-3 gap-3">
-              <a href="#" className="text-white mr-3">
+              <a href="https://twitter.com/" className="text-white mr-3">
                 <FaXTwitter size={25} />
               </a>
-              <a href="#" className="text-white mr-3">
+
+              <a href="https://www.facebook.com/" className="text-white mr-3">
                 <FaFacebook size={25} />
               </a>
-              <a href="#" className="text-white mr-3">
+
+              <a href="https://www.instagram.com/" className="text-white mr-3">
                 <FaInstagram size={25} />
               </a>
-              <a href="#" className="text-white">
+
+              <a href="https://www.linkedin.com/" className="text-white">
                 <FaLinkedin size={25} />
               </a>
             </div>

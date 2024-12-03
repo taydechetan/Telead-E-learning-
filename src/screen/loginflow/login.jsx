@@ -34,7 +34,7 @@ const Login = () => {
       setRememberMe(true);
     }
   }, []);
-  const [errors, setErrors] = useState({}); // To store validation errors
+  const [errors, setErrors] = useState({});
   const [load, setLoad] = useState(false);
 
   console.log("rememberMe>>>", rememberMe);
@@ -258,7 +258,7 @@ const loaderStyle = {
   top: 0,
   left: 0,
   width: "100%",
-  background: "rgba(255, 255, 255, 0.8)", 
+  background: "rgba(255, 255, 255, 0.8)",
   zIndex: 9999,
 };
 

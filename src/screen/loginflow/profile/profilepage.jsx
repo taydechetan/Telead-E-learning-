@@ -14,10 +14,18 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 // import overall from "../mailto:image/oval@2x.png";
 // import fil from "../Image/Fill 1.png";
-// import icon from "../Image/Icon.png";
+import "react-phone-input-2/lib/style.css";
+
+import Imagess from "../../../assets/image/Icon (1).png";
+import overall from "../../../assets/image/Fill 1@3x.png";
+import fill from "../../../assets/image/Oval.png";
+import PhoneInput from "react-phone-input-2";
 import "./Profilepage.css";
 
 const Profilepage = () => {
+  const [phone, setPhone] = useState("");
+  // const [phoneNumber, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("in");
   const [formData, setFormData] = useState({
     fullName: "",
     nickName: "",
@@ -26,6 +34,18 @@ const Profilepage = () => {
     phone: "",
     gender: "",
   });
+
+  const handlePhoneChange = (value, country) => {
+    const countryCode = country.dialCode;
+    const phoneNumber = value.slice(countryCode.length);
+    setCountryCode(countryCode);
+    setPhone(phoneNumber);
+    setFormData({
+      ...formData,
+      mobile_number: phoneNumber,
+      country_code: countryCode,
+    });
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,11 +58,11 @@ const Profilepage = () => {
   };
 
   return (
-    <Container fluid className="profile-page-wrapper py-5 m-0 ">
+    <Container fluid className="profile-page-wrapper py-5 m-0 mt-5">
       <Row className="profile-page-row justify-content-center">
         <Col xs={12} sm={10} md={8} lg={6} xl={4} className="profile-page-col">
           <Card className="profile-page-card shadow p-4 bg-light">
-            <Row className="profile-header align-items-center mb-4">
+            <Row className="profile-header align-items-center">
               <Col xs="auto">
                 <Button
                   variant="link"
@@ -51,26 +71,28 @@ const Profilepage = () => {
                   <i className="bi bi-arrow-left fs-4"></i>
                 </Button>
               </Col>
-              <Col>
+              {/* <Col>
                 <h5 className="profile-title mb-0 fw-bold">
                   Fill Your Profile
                 </h5>
-              </Col>
+              </Col> */}
             </Row>
 
             <Row className="profile-pic-row justify-content-center text-center mb-4">
               <Col xs="auto" className="profile-pic-col position-relative">
-                {/* <img className="overallimage" src={overall} alt="imgage" /> */}
+                <img className="overallimage" src={overall} alt="imgage" />
                 <span>
                   {" "}
-                  {/* <img className="filimage" src={fil} alt="imgage" /> */}
+                  {/* <img className="filimage" src={fill} alt="imgage" /> */}
                 </span>
                 <Button
                   variant="success"
                   size="sm"
                   className="profile-edit-btn position-absolute bottom-0 end-0 rounded-circle p-1"
                 >
-                  <span>{/* <img src={icon}></img> */}</span>
+                  <span className="pngtagg">
+                    <img className="pngtagg" src={Imagess}></img>
+                  </span>
                 </Button>
               </Col>
             </Row>
@@ -119,7 +141,7 @@ const Profilepage = () => {
                 <div className="form-date-group position-relative">
                   <MdOutlineMail
                     className="form-date-icon position-absolute text-secondary"
-                    style={{ fontSize: "1.5rem", top: "16px", left: "10px" }}
+                    style={{ fontSize: "1.5rem", top: "19px", left: "10px" }}
                   />
 
                   <Form.Control
@@ -134,17 +156,38 @@ const Profilepage = () => {
               </Form.Group>
 
               <Form.Group className="form-group mb-3">
-                <Form.Control
-                  type="text"
+                <PhoneInput
+                  country={"in"}
+                  name="mobile_number"
+                  value={`${countryCode}${phone}`}
+                  onChange={(value, country) =>
+                    handlePhoneChange(value, country)
+                  }
+                  inputProps={{
+                    name: "country_code",
+                    required: true,
+                    autoFocus: true,
+                  }}
+                  containerStyle={{ width: "100%" }}
+                  inputStyle={{
+                    width: "100%",
+                    paddingLeft: "50px",
+                    fontSize: "16px",
+                    height: "45px",
+                  }}
+                />
+              </Form.Group>
+
+              {/* <Form.Control
+                  type="number"
                   placeholder="Phone Number"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
                   className="form-inputrounded-end-pill"
-                />
-              </Form.Group>
+                /> */}
 
-              <Form.Group className="form-group mb-3">
+              <Form.Group className="form-group mb-3 border">
                 <Form.Select
                   name="gender"
                   value={formData.gender}

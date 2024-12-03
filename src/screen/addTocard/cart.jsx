@@ -118,17 +118,10 @@ const Cart = () => {
     navigate(-1);
   };
 
-  // const totalPrice = cart.reduce((total, item) => total + Number(item.price), 0);
   const totalPrice = cart.reduce((total, item) => {
-    const price = parseFloat(item.price.replace("$", "")); // Remove "$" and convert to a float
-    return total + (isNaN(price) ? 0 : price); // Add price if it's valid, otherwise add 0
+    const price = parseFloat(item.price.replace("$", ""));
+    return total + (isNaN(price) ? 0 : price);
   }, 0);
-
-  // console.log("Cart Items:", cart);
-  // console.log(
-  //   "Total Price Calculation:",
-  //   cart.map((item) => item.price)
-  // );
 
   return (
     <Container style={{ marginTop: "120px" }}>
@@ -136,17 +129,6 @@ const Cart = () => {
         <img src={Serchpng} alt="img" />
         <h2 className="ms-3 mt-2">Shopping Cart</h2>
       </p>
-
-      <Row className="mb-4">
-        <Col>
-          <h3 className="text-end">
-            <strong>Total Price: ${totalPrice.toFixed(2)}</strong>
-          </h3>
-        </Col>
-        <Button variant="success" size="sm" onClick={handleCheckout} style={{width:"100px"}}>
-          Checkout
-        </Button>
-      </Row>
 
       <Row className="gy-3">
         {cart.map((item) => (
@@ -173,21 +155,47 @@ const Cart = () => {
                   Remove
                 </Button>
               </Card.Body>
-              <Card.Footer className="cart-item-footer">
-                <Button variant="success" size="sm" onClick={handleCheckout}>
-                  Checkout
-                </Button>
-              </Card.Footer>
             </Card>
           </Col>
         ))}
       </Row>
 
-      <div className="text-center mt-4 mb-5">
-        <Button variant="warning" onClick={clearCart}>
-          Clear Cart
-        </Button>
-      </div>
+      <Row
+        className="text-center mt-4 mb-5 d-flex"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <Col>
+          <h3 className="text-center">
+            <strong>Total Price: ${totalPrice.toFixed(2)}</strong>
+          </h3>
+        </Col>
+
+        <Col>
+          <Button
+            variant="success"
+            size="sm"
+            onClick={handleCheckout}
+            style={{ width: "100px" }}
+            className="mb-3 checkouttbn"
+          >
+            Checkout
+          </Button>
+        </Col>
+
+        <Col>
+          <Button
+            variant="warning"
+            onClick={clearCart}
+            style={{ width: "30%" }}
+          >
+            Clear Cart
+          </Button>
+        </Col>
+      </Row>
     </Container>
   );
 };

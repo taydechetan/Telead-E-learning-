@@ -70,7 +70,7 @@ const ForgotPassword = () => {
       const data = await response.json();
       if (data.success) {
         toast.success(data?.msg);
-        // navigate("/login");
+        navigate("/verifycode");
         setLoad(false);
       } else {
         setLoad(false);
