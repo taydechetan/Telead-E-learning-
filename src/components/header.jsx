@@ -140,7 +140,6 @@
 
 // export default Header;
 
-
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { FaSearch } from "react-icons/fa";
@@ -149,6 +148,7 @@ import { Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { useCart } from "./cartcontext";
+import { FaChevronDown } from "react-icons/fa6";
 
 import Modal from "react-bootstrap/Modal";
 import { getUserdata, Logout, setUserData } from "../helper/storage";
@@ -158,6 +158,7 @@ const Header = () => {
   const { removeFromCart } = useCart();
   const { cart } = useCart();
   const [user, setUser] = useState(null);
+  const [name, setname] = useState("");
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -219,8 +220,23 @@ const Header = () => {
     }
   };
 
+  // const userData = window.localStorage.getItem("@userData");
+
+  // if (userData) {
+  //   const parsedData = JSON.parse(userData);
+  //   console.log("dataaa", parsedData.name);
+  // } else {
+  //   console.log("No user data found.");
+  // }
+
   useEffect(() => {
     checkUserLoginStatus();
+
+    const userData = window.localStorage.getItem("@userData");
+    if (userData) {
+      const parsedData = JSON.parse(userData);
+      setname(parsedData.name);
+    }
   }, []);
 
   return (
@@ -316,9 +332,8 @@ const Header = () => {
                 </li>
               )}
 
-              {/* Cart Icon to Open Modal */}
               <li
-                className="navitemscar mt-3"
+                className="navitemscar"
                 onClick={toggleCartModal}
                 style={{ cursor: "pointer" }}
               >
@@ -336,6 +351,13 @@ const Header = () => {
                 >
                   {totalQuantity}
                 </span>
+              </li>
+
+              <li className="nav-itemms p-1 mt-1">
+                <Link to="/studentprofile" className="no-decoration d-flex">
+                  <h5>{name ? name : "Guest"}</h5>
+                  <FaChevronDown className="mt-1 ms-1"/>
+                </Link>
               </li>
             </ul>
           </div>

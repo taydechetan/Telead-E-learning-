@@ -1,0 +1,114 @@
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.update-button {
+  padding: 10px 15px;
+  background-color: #782a8c;
+  color: #fff;
+  border: 1px solid #782a8c;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: white;
+  color: #782a8c;
+}
+
+.sidebar-container,
+.profile-form-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-item.active {
+  /* background-color: #782a8c; */
+  color: white;
+}
+
+.menu-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.update-button {
+  padding: 10px 15px;
+  background-color: #782a8c;
+  color: #fff;
+  border: 1px solid #782a8c;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: white;
+  color: #782a8c;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.update-button {
+  padding: 10px 15px;
+  background-color: #782a8c;
+  color: #fff;
+  border: 1px solid #782a8c;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: white;
+  color: #782a8c;
+}
+
+@media (max-width: 576px) {
+  input {
+    margin-top: 10px;
+  }
+
+  input[name="email"] {
+    margin-top: 20px;
+  }
+
+  input[name="address"] {
+    margin-top: 20px;
+  }
+}

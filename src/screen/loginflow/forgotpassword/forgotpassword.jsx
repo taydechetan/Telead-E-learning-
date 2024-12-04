@@ -12,6 +12,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import toast from "react-hot-toast";
 import ClipLoader from "react-spinners/ClipLoader";
 
+
 import * as Yup from "yup";
 import ApiEndPoints from "../../../networkcall/apiendpoint";
 
@@ -25,7 +26,7 @@ const ForgotPassword = () => {
   const [formdata, setFormdata] = useState({
     email: "",
   });
-  const [errors, setErrors] = useState({}); // To store validation errors
+  const [errors, setErrors] = useState({}); 
   console.log("ERRROR>>>>", errors);
   const [load, setLoad] = useState(false);
   const validationSchema = Yup.object().shape({

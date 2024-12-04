@@ -21,6 +21,10 @@ import Profilepage from "../screen/loginflow/profile/profilepage";
 import Cart from "../screen/addTocard/cart";
 import Termcondition from "../screen/Footer/termcondition";
 import Privacypolicy from "../screen/Footer/privacypolicy/privacypolicy";
+import Studentprofile from "../screen/myaccount/studentprofile";
+import Changepassword from "../screen/myaccount/changepassword";
+import Pricingpage from "../screen/addTocard/pricingpage";
+import Dashboard from "../screen/dashboard/dashboard";
 
 export default function publicrouter() {
   return (
@@ -46,7 +50,11 @@ export default function publicrouter() {
           <Route path="profilepage" element={<Profilepage />} />
           <Route path="cart" element={<Cart />} />
           <Route path="termcondition" element={<Termcondition />} />
-          <Route path="privacypolicy" element={<Privacypolicy/>} />
+          <Route path="privacypolicy" element={<Privacypolicy />} />
+          <Route path="studentprofile" element={<Studentprofile />} />
+          <Route path="changepassword" element={<Changepassword />} />
+          <Route path="pricingpage" element={<Pricingpage />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </BrowserRouter>
