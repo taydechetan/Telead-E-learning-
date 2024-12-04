@@ -5,6 +5,7 @@ import CardComponent from "../../components/card";
 import TopMentor from "../../components/mentors";
 import VerifyCode from "../loginflow/verifyotp/verifycode";
 import Profilepage from "../loginflow/profile/profilepage";
+import PricingPlans from "../addTocard/pricingpage";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
       <TopMentor />
       {/* <VerifyCode/> */}
       {/* <Profilepage /> */}
+      <PricingPlans/>
     </div>
   );
 };

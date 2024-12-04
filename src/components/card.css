@@ -15,9 +15,10 @@
 }
 
 .header-see-all {
-  color: blue;
+  color: #007bff;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header-arrow {

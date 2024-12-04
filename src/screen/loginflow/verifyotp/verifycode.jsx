@@ -8,6 +8,7 @@ import ApiEndPoints from "../../../networkcall/apiendpoint";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
 
+
 const VerifyCode = () => {
   const [code, setCode] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(59);

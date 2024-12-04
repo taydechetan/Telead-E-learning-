@@ -10,6 +10,14 @@
   margin-right: 0;
 }
 
+.nav-itemms{
+  padding: 20px;
+}
+
+.no-decoration{
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .navbar-nav .nav-item {
     margin-bottom: 10px;
@@ -91,6 +99,7 @@
 
 .navitemscar {
   position: relative;
+  padding: 15px;
 }
 
 .modal-content {

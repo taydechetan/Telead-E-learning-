@@ -14,6 +14,8 @@ const ApiEndPoints = {
   Termconditon: `${APPConfig.API_URL}/page/terms_condition`,
   Privacypolicy: `${APPConfig.API_URL}/page/privacy_policy`,
   Sendotpemail: `${APPConfig.API_URL}/forgot-verify-email-otp`,
+  StudentProfile: `${APPConfig.API_URL}/student-update-profile`,
+  ChangePassword: `${APPConfig.API_URL}/change-password`,
 };
 
 export default ApiEndPoints;
