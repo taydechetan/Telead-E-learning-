@@ -1,0 +1,148 @@
+.form-select {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: white;
+
+  border: none;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #080707;
+  background-color: white;
+}
+.overallimage {
+  width: 95px;
+  height: 100px;
+  background-color: #bbc6d7;
+  border-radius: 100px;
+}
+
+.filimage {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 40px;
+}
+
+.form-date-group {
+  position: relative;
+}
+
+.form-date-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.pngtagg {
+  width: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-edit-btn {
+  background-color: #086252;
+  color: #fff;
+  border: none;
+  position: absolute;
+  left: 70%;
+  width: 33px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-submit-btn {
+  font-family: "jost";
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #007bff;
+  line-height: 26.01px;
+  width: 360px;
+  height: 60px;
+
+  border: none;
+}
+
+.form-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.profile-page-card {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.profile-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.profile-back-btn {
+  color: #333;
+}
+
+.profile-back-btn:hover {
+  color: #007bff;
+}
+
+.form-submit-btn {
+  /* background-color: #0961f5;
+    border-color: #0961f5;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;  */
+  border-radius: 100px;
+  position: relative;
+  padding-right: 60px;
+  width: 350px;
+  height: 50px;
+  /* display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; */
+}
+
+.form-submit-btn:hover {
+  background-color: #004ccc;
+  border-color: #004ccc;
+}
+
+.arrow-box {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: #0961f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-submit-btn:hover .icon-wrapper {
+  color: #004ccc;
+}

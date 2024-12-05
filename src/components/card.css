@@ -1,0 +1,116 @@
+.card-containerrr {
+  background-color: #f9f9f9;
+  /* padding: 20px; */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+.header-title {
+  font-weight: bold;
+}
+
+.header-see-all {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-arrow {
+  font-size: 20px;
+}
+
+.responsive-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.responsive-list li {
+  padding: 10px 15px;
+  background-color: #e8f1ff;
+  color: black;
+  cursor: pointer;
+  border-radius: 21px;
+  transition: all 0.3s ease;
+}
+
+.responsive-list li:hover {
+  color: white;
+  background-color: #167f71;
+}
+
+.custom-card {
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.card-price {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.card-rating {
+  color: #ffba00;
+}
+
+.card-students {
+  color: #6c757d;
+}
+
+.text-orange {
+  color: #ff5733;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    max-width: 100%;
+  }
+}
+
+.card-header {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 576px) {
+  .responsive-list li:nth-child(n + 4) {
+    display: none;
+  }
+}

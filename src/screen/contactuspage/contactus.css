@@ -1,0 +1,45 @@
+.contact-form-container {
+  background-color: #f8f9fa;
+}
+
+.contact-form {
+  background-color: #f5f9ff;
+  border-radius: 10px;
+}
+
+.contact-form-title {
+  font-weight: bold;
+}
+
+.contact-form-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-form-input {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.file-upload-box {
+  border: 2px dashed #ced4da;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.file-upload-label {
+  color: #6c757d;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 512px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+}
+

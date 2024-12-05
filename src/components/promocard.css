@@ -1,0 +1,112 @@
+.promo-container {
+  /* background-color: #f0f4fc; */
+  width: 100%;
+  /* height: 55vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-carousel {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #005bff, #4a90e2);
+  color: white;
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 300px;
+}
+
+.promo-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.promo-text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.promo-text h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.promo-text p {
+  font-size: 1rem;
+}
+
+.promo-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+.promo-dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.promo-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-dot.active {
+  background-color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .promo-image img {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  .promo-container {
+    height: 40vh;
+  }
+}
+
+.promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start (left side) */
+  padding: 20px;
+  background-color: #f8f9fa; /* Optional: Add a background color */
+}
+
+.promo-text {
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+.promo-text h4,
+.promo-text h2,
+.promo-text p {
+  margin: 0; /* Adjust margins as needed */
+  padding: 5px 0; /* Add space between elements */
+}

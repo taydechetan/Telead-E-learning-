@@ -1,0 +1,151 @@
+.nav-item {
+  margin-right: 20px;
+}
+
+.navbar {
+  background-color: #f5f4f1;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.namess {
+  color: #9e876d;
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+
+.nav-itemms {
+  padding: 2px 10px;
+  /* padding: 20px; */
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .btn-primary,
+  .navbar-nav .btn-outline-primary {
+    width: 154px;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  box-shadow: 0 0 0 0.1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .button-container .btn {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-icon {
+    display: inline-block;
+  }
+
+  .search-bar {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 769px) {
+  .search-icon {
+    display: none;
+  }
+
+  search-bar {
+    display: none;
+  }
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.close-search {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cartshoppingicon {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: rounded-full;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navitemscar {
+  position: relative;
+  padding: 15px;
+}
+
+.modal-content {
+  width: 50%;
+  float: right;
+}
+
+.cart-modal-remove-btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: red;
+}
+
+.cart-modal-checkout-btn {
+  background-color: rgb(26, 197, 140);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.cart-modal-checkout-btn:hover {
+  background-color: #1f89e0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+@media (max-width: 820px) {
+  .modal-content {
+    width: 65%;
+    float: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    width: 70%;
+    float: right;
+    margin: 0 auto;
+  }
+}

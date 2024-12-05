@@ -1,0 +1,117 @@
+.pricing-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.pricing-card {
+  border-radius: 15px;
+  /* padding: 20px; */
+  text-align: center;
+  transition: all 0.3s ease;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* min-height: 400px;
+  width: 350px; */
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);  
+  background-color: #f8f9fa;  
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-business {
+  background-color: #f3e4ff;
+  color: #5e239d;
+}
+
+.pricing-teams {
+  background-color: #e4f5ff;
+  color: #1d80c1;
+}
+
+.pricing-creator {
+  background-color: #fff5e4;
+  color: #d68b00;
+}
+
+.pricing-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pricing-cost {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.pricing-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.pricing-button {
+  background-color: #782a8c;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.pricing-features li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.trial-button {
+  position: relative;
+  background-color: #0066ff;
+  border-color: #0066ff;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: white;
+  /* padding: 10px 20px; */
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.trial-button:hover {
+  background-color: #004ccc;
+  border-color: #004ccc;
+}
+
+.arrow-icon {
+  float: right;  
+  background-color: white; 
+  color: black;
+  width: 30px;
+  height: 29px;
+  border-radius: 50%; 
+  display: flex;  
+  align-items: center; 
+  justify-content: center;  
+  font-size: 1.2rem;  
+}
+
+.trial-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.trial-button:hover {
+  background-color: #45a049;
+  color: white;
+  text-decoration: none;
+}

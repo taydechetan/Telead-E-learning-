@@ -1,0 +1,172 @@
+/* .course-container {
+  margin: 20px;
+} */
+
+.course-tabs .tab-link {
+  color: #333;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.tab-link.active {
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid black;
+}
+
+.course-details-section {
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+  border-radius: 8px;
+}
+
+.instructor-image {
+  width: 100%;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.instructor-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.course-purchase-section {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-section {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-section h3 {
+  color: #5cb85c;
+  margin-right: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discount {
+  color: #d9534f;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+}
+
+.buy-now-btn {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+}
+
+.course-highlights {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.course-highlights li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .course-purchase-section {
+    margin-top: 20px;
+  }
+}
+
+.custom-tabs {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.custom-tabs .nav-link {
+  border: 1px solid black;
+  border-right: none;
+  margin: 0;
+  padding: 10px 15px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.custom-tabs .nav-link:last-child {
+  border-right: 1px solid #ddd;
+}
+
+.custom-tabs .nav-link.active {
+  background-color: #fff;
+  color: #007bff;
+  border-bottom: 1px solid #2b0c0c;
+}
+
+.custom-tabs .nav-link:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+.coursec-titlee {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.coursec-subtitlee {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .coursec-titlee {
+    font-size: 1.5rem;
+  }
+
+  .coursec-subtitlee {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .coursec-subtitlee {
+    font-size: 0.9rem;
+  }
+
+  .course-purchase-section {
+    width: 90%;
+  }
+}
+
+.row .headingg-section {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
