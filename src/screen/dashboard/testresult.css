@@ -1,4 +1,4 @@
-.dashboard-container {
+.testresult-container {
   margin-top: 60px;
   min-height: 100vh;
   padding: 20px;
@@ -7,8 +7,6 @@
 .sidebar {
   background-color: #f5f5f5;
   cursor: pointer;
-  /* border: 1px solid red;
-  padding: 20px; */
 }
 
 .profile-picturees img {
@@ -27,18 +25,18 @@
   background-color: red;
 }
 
-.dashboard-content {
+.testresult-content {
   padding: 20px;
   border-radius: 5px;
   height: 30%;
   background-color: #f5f5f5;
 }
 
-.dashboard-title {
+.testresult-title {
   color: #5cb85c;
 }
 
-.dashboard-card {
+.testresult-card {
   background-color: #8b82c3;
   color: white;
   text-align: center;
@@ -56,9 +54,3 @@
   background-color: #8b82c3;
   color: white;
 }
-
-.nodashhhh {
-  text-decoration: none !important;
-}
-
-

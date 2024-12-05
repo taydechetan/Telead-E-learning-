@@ -353,12 +353,21 @@ const Header = () => {
                 </span>
               </li>
 
-              <li className="nav-itemms p-1 mt-1">
+              {name ? (
+                <li className="nav-itemms p-1 mt-1">
+                  <Link to="/studentprofile" className="no-decoration d-flex">
+                    <h5 className="text-secondary namess ms-3">{name}</h5>
+                    <FaChevronDown className="mt-1 text-secondary" />
+                  </Link>
+                </li>
+              ) : null}
+
+              {/* <li className="nav-itemms p-1 mt-1">
                 <Link to="/studentprofile" className="no-decoration d-flex">
-                  <h5>{name ? name : "Guest"}</h5>
-                  <FaChevronDown className="mt-1 ms-1"/>
+                  <h5 className="text-secondary  namess">{name ? name : "Guest"}</h5>
+                  <FaChevronDown  className="mt-1 ms-1 text-secondary"/>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

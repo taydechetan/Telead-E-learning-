@@ -25,6 +25,11 @@ import Studentprofile from "../screen/myaccount/studentprofile";
 import Changepassword from "../screen/myaccount/changepassword";
 import Pricingpage from "../screen/addTocard/pricingpage";
 import Dashboard from "../screen/dashboard/dashboard";
+import LearningSection from "../components/learningsection";
+import Onlineclass from "../screen/dashboard/onlineclass";
+import Paymentsdetail from "../screen/dashboard/paymentsdetail";
+import TestResult from "../screen/dashboard/testresult";
+import Courseslist  from "../screen/dashboard/courseslist";
 
 export default function publicrouter() {
   return (
@@ -55,6 +60,11 @@ export default function publicrouter() {
           <Route path="changepassword" element={<Changepassword />} />
           <Route path="pricingpage" element={<Pricingpage />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="learningSection" element={<LearningSection />} />
+          <Route path="testesult" element={<TestResult />} />
+          <Route path="paymentsdetail" element={<Paymentsdetail />} />
+          <Route path="onlineclass" element={<Onlineclass />} />
+          <Route path="courseslist" element={<Courseslist />} />
         </Routes>
         <Footer />
       </BrowserRouter>
