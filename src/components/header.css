@@ -10,11 +10,19 @@
   margin-right: 0;
 }
 
-.nav-itemms{
-  padding: 20px;
+.namess {
+  color: #9e876d;
+  font-size: 20px;
+  font-weight: 400;
+  
 }
 
-.no-decoration{
+.nav-itemms {
+  padding: 2px 10px;
+  /* padding: 20px; */
+}
+
+.no-decoration {
   text-decoration: none;
 }
 
@@ -126,7 +134,6 @@
   border: none;
   padding: 10px 20px;
 }
-
 
 @media (max-width: 820px) {
   .modal-content {

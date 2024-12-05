@@ -1,0 +1,77 @@
+.learning-section-container {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.learning-image-section {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.learning-image {
+  width: 73%;
+  height: auto;
+  object-fit: cover;
+}
+
+.learning-content-section {
+  padding: 20px;
+}
+
+.learning-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.learning-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.features-list {
+  margin-top: 20px;
+  width: 60%;
+}
+
+.feature-card {
+  border: none;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.feature-body {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #555;
+}

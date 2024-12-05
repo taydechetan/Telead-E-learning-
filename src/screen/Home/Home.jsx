@@ -6,6 +6,8 @@ import TopMentor from "../../components/mentors";
 import VerifyCode from "../loginflow/verifyotp/verifycode";
 import Profilepage from "../loginflow/profile/profilepage";
 import PricingPlans from "../addTocard/pricingpage";
+import Dashboard from "../dashboard/dashboard";
+import Learningsection from "../../components/learningsection";
 
 const Home = () => {
 
@@ -18,7 +20,9 @@ const Home = () => {
       <TopMentor />
       {/* <VerifyCode/> */}
       {/* <Profilepage /> */}
+      <Learningsection/>
       <PricingPlans/>
+      <Dashboard/>
     </div>
   );
 };

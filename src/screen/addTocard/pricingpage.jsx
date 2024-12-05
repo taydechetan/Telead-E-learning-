@@ -65,6 +65,7 @@ const pricingData = [
   },
 ];
 
+
 const PricingPlans = () => {
   return (
     <Container className="pricing-container py-5">
